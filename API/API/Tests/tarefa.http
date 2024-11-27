@@ -1,0 +1,29 @@
+### Listar todas as tarefas
+GET http://localhost:5000/api/tarefas/listar
+
+### Cadastrar uma nova tarefa
+POST http://localhost:5000/api/tarefas/cadastrar
+Content-Type: application/json
+
+{
+    "titulo": "Estudar Node.js",
+    "descricao": "Estudar Node.js para desenvolver aplicações web",
+    "categoriaId": "6d091456-5a2f-4b5a-98fc-f1a3b50a627d"
+}
+
+### buscar tarefa
+GET http://localhost:5000/api/tarefas/buscar/2f1b7dc1-3b9a-4e1a-a389-7f5d2f1c8f3e
+
+### alterar uma tarefa
+PUT http://localhost:5000/tarefas/alterar/67ce82ee-7714-4f46-bbea-c0270f1a7df3
+Content-Type: application/json
+
+{
+    "titulo" : "Alterando Estudar Angula",
+    "descricao" : "Preparar-se para a aula de Angular",
+    "status" : "Em andamento",
+    "categoriaId" : "bfe4e7dc-81e4-4e47-a67b-d4fbf3e124bd"
+}
+
+### tarefas nao concluidas
+GET http://localhost:5000/tarefas/naoconcluidas
